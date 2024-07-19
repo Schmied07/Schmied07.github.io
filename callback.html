@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Callback</title>
+    <script>
+        // Extraire le code d'autorisation de l'URL
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+
+        if (code) {
+            document.getElementById('code').textContent = code;
+        } else {
+            document.getElementById('code').textContent = 'No code found';
+        }
+    </script>
+</head>
+<body>
+    <h1>OAuth Callback</h1>
+    <p>Authorization code: <span id="code"></span></p>
+</body>
+</html>
