@@ -5,19 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OAuth Callback</title>
     <script>
-        // Extraire le code d'autorisation de l'URL
-        const params = new URLSearchParams(window.location.search);
-        const code = params.get('code');
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const code = params.get('code');
+            const state = params.get('state');
+            const storedState = sessionStorage.getItem('oauthState');
 
-        if (code) {
-            document.getElementById('code').textContent = code;
-        } else {
-            document.getElementById('code').textContent = 'No code found';
-        }
+            if (state !== storedState) {
+                document.getElementById('message').textContent = 'State mismatch! Possible CSRF attack.';
+                return;
+            }
+
+            if (code) {
+                document.getElementById('message').textContent = `Authorization code: ${code}`;
+                // Vous pouvez maintenant envoyer ce code à votre serveur pour échanger contre un token d'accès
+            } else {
+                document.getElementById('message').textContent = 'No code found';
+            }
+        });
     </script>
 </head>
 <body>
     <h1>OAuth Callback</h1>
-    <p>Authorization code: <span id="code"></span></p>
+    <p id="message"></p>
 </body>
 </html>
