@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <title>TetrisNews</title>
     <style>
         body, html {
-            height: 30%;
+            height: 100%;
             margin: 0;
         }
         .carousel-container {
@@ -17,9 +17,8 @@
             height: 30%;
         }
         .navbar-transparent {
-                background-color: rgba(255, 255, 255, 0.5) !important; /* Transparence ajustable */
-            }
-
+            background-color: rgba(255, 255, 255, 0.5) !important; /* Transparence ajustable */
+        }
         .pricing-header {
             text-align: center;
             margin-bottom: 30px;
@@ -28,6 +27,7 @@
             border: none;
             border-radius: 1rem;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: white;
         }
         .card-title {
             margin-bottom: 1rem;
@@ -40,10 +40,21 @@
         }
         .card-price span {
             font-size: 1rem;
-            color: #6c757d;
         }
         .card-feature {
             margin: 15px 0;
+        }
+        .card-basic {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+        }
+        .card-standard {
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+        .card-libre {
+            background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+        }
+        .card-premium {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
         }
     </style>
     <script>
@@ -70,6 +81,8 @@
             window.location.href = url;
         }
     </script>
+</head>
+<body>
     <!-- Barre de navigation -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-transparent fixed-top">
         <div class="container-fluid">
@@ -83,21 +96,18 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link link-dark" href="legal/termsofService.html">termsofService</a>
+                        <a class="nav-link link-dark" href="legal/termsofService.html">Conditions d'utilisation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-dark" href="legal/legalprivacy.html">legalprivacy</a>
+                        <a class="nav-link link-dark" href="legal/legalprivacy.html">Politique de confidentialité</a>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-outline-dark me-2" onclick="redirectToTikTok()" type="button">Login</button>
+                        <button class="btn btn-outline-dark me-2" onclick="redirectToTikTok()" type="button">Connexion</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-</head>
-<body>
-    
 
     <!-- Carrousel -->
     <div id="carouselExampleDark" class="carousel carousel-dark slide">
@@ -111,81 +121,102 @@
                 <img src="https://images.unsplash.com/photo-1528808302-cddd825c94fd?q=80&w=1774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Choisissez votre passion</h5>
-                    <p>Choisissez le type de contenu qui vous interesse</p>
+                    <p>Choisissez le type de contenu qui vous intéresse</p>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Créez de l'engagement</h5>
-                    <p> Partager ce contenu tous les jours sur votre feed tiktok de façon automatique pour créer de l'engagement.</p>
+                    <p> Partagez ce contenu tous les jours sur votre feed TikTok de façon automatique pour créer de l'engagement.</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="https://images.unsplash.com/photo-1615397349754-cfa2066a298e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Collaboration</h5>
-                    <p>faire des partenariat avec des entreprises pour promouvoir leurs produits sur votre page.</p>
+                    <p>Faites des partenariats avec des entreprises pour promouvoir leurs produits sur votre page.</p>
                 </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden">Précédent</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden">Suivant</span>
         </button>
     </div>
-    <div class="container">
+
+    <!-- Plans de tarification -->
+    <div class="container mt-5">
         <div class="pricing-header">
             <h1>Nos Plans de Tarification</h1>
             <p>Choisissez le plan qui vous convient le mieux.</p>
         </div>
         <div class="row">
             <!-- Plan Basique -->
-            <div class="col-lg-4">
-                <div class="card text-center">
+            <div class="col-lg-3">
+                <div class="card text-center card-basic">
                     <div class="card-body">
                         <h5 class="card-title">Basique</h5>
                         <p class="card-price">10€<span>/mois</span></p>
                         <ul class="list-unstyled">
-                            <li class="card-feature">10 posts automatiques par mois</li>
-                            <li class="card-feature">Support par email</li>
+                            <li class="card-feature">Posts automatisés 7J/7</li>
+                            <li class="card-feature">Présence de publicités sur chaque post</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">S'inscrire</a>
+                        <a href="#" class="btn btn-light">S'inscrire</a>
                     </div>
                 </div>
             </div>
             <!-- Plan Standard -->
-            <div class="col-lg-4">
-                <div class="card text-center">
+            <div class="col-lg-3">
+                <div class="card text-center card-standard">
                     <div class="card-body">
                         <h5 class="card-title">Standard</h5>
-                        <p class="card-price">25€<span>/mois</span></p>
+                        <p class="card-price">20€<span>/mois</span></p>
                         <ul class="list-unstyled">
-                            <li class="card-feature">50 posts automatiques par mois</li>
-                            <li class="card-feature">Support prioritaire par email</li>
-                            <li class="card-feature">Analyses de base</li>
+                            <li class="card-feature">Posts automatisés 7J/7</li>
+                            <li class="card-feature">Présence de publicités sur chaque post</li>
+                            <li class="card-feature">Contenu exclusif</li>
+                            <li class="card-feature">Personnalisation de la charte graphique</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">S'inscrire</a>
+                        <a href="#" class="btn btn-light">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Plan Libre -->
+            <div class="col-lg-3">
+                <div class="card text-center card-libre">
+                    <div class="card-body">
+                        <h5 class="card-title">Libre</h5>
+                        <p class="card-price">35€<span>/mois</span></p>
+                        <ul class="list-unstyled">
+                            <li class="card-feature">Contenu exclusif</li>
+                            <li class="card-feature">Posts automatisés 7J/7</li>
+                            <li class="card-feature">Personnalisation de la charte graphique</li>
+                            <li class="card-feature">Posts sans aucune publicité</li>
+                        </ul>
+                        <a href="#" class="btn btn-light">S'inscrire</a>
                     </div>
                 </div>
             </div>
             <!-- Plan Premium -->
-            <div class="col-lg-4">
-                <div class="card text-center">
+            <div class="col-lg-3">
+                <div class="card text-center card-premium">
                     <div class="card-body">
                         <h5 class="card-title">Premium</h5>
-                        <p class="card-price">50€<span>/mois</span></p>
+                        <p class="card-price">1000€<span>/an</span> + 20€<span>/mois</span></p>
                         <ul class="list-unstyled">
-                            <li class="card-feature">Posts automatiques illimités</li>
-                            <li class="card-feature">Support prioritaire 24/7</li>
-                            <li class="card-feature">Analyses avancées</li>
+                            <li class="card-feature">Contenu exclusif</li>
+                            <li class="card-feature">Posts automatisés 7J/7</li>
+                            <li class="card-feature">Personnalisation de la charte graphique</li>
+                            <li class="card-feature">Gagnez des revenus sur chaque post sponsorisé</li>
+                            <li class="card-feature">Adhésion réservée aux 100 premiers inscrits</li>
                             <li class="card-feature">Accès à des fonctionnalités exclusives</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">S'inscrire</a>
+                        <a href="#" class="btn btn-light">S'inscrire</a>
                     </div>
                 </div>
             </div>
