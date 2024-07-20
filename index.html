@@ -19,6 +19,32 @@
         .navbar-transparent {
                 background-color: rgba(255, 255, 255, 0.5) !important; /* Transparence ajustable */
             }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .card-title {
+            margin-bottom: 1rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .card-price {
+            font-size: 2.5rem;
+            margin: 20px 0;
+        }
+        .card-price span {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+        .card-feature {
+            margin: 15px 0;
+        }
     </style>
     <script>
         function generateState(length) {
@@ -84,7 +110,7 @@
             <div class="carousel-item active" data-bs-interval="10000">
                 <img src="https://images.unsplash.com/photo-1528808302-cddd825c94fd?q=80&w=1774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Choisissez votre pation</h5>
+                    <h5>Choisissez votre passion</h5>
                     <p>Choisissez le type de contenu qui vous interesse</p>
                 </div>
             </div>
@@ -111,6 +137,59 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+    </div>
+    <div class="container">
+        <div class="pricing-header">
+            <h1>Nos Plans de Tarification</h1>
+            <p>Choisissez le plan qui vous convient le mieux.</p>
+        </div>
+        <div class="row">
+            <!-- Plan Basique -->
+            <div class="col-lg-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Basique</h5>
+                        <p class="card-price">10€<span>/mois</span></p>
+                        <ul class="list-unstyled">
+                            <li class="card-feature">10 posts automatiques par mois</li>
+                            <li class="card-feature">Support par email</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Plan Standard -->
+            <div class="col-lg-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Standard</h5>
+                        <p class="card-price">25€<span>/mois</span></p>
+                        <ul class="list-unstyled">
+                            <li class="card-feature">50 posts automatiques par mois</li>
+                            <li class="card-feature">Support prioritaire par email</li>
+                            <li class="card-feature">Analyses de base</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Plan Premium -->
+            <div class="col-lg-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Premium</h5>
+                        <p class="card-price">50€<span>/mois</span></p>
+                        <ul class="list-unstyled">
+                            <li class="card-feature">Posts automatiques illimités</li>
+                            <li class="card-feature">Support prioritaire 24/7</li>
+                            <li class="card-feature">Analyses avancées</li>
+                            <li class="card-feature">Accès à des fonctionnalités exclusives</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
