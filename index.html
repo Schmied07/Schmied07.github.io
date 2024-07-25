@@ -32,113 +32,116 @@
 
         .pricing-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin: 50px 0;
         }
+
         .card {
             border: none;
             border-radius: 1rem;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
+
         .card-title {
-            margin-bottom: 1rem;
             font-weight: 700;
             font-size: 1.5rem;
         }
+
         .card-price {
-            font-size: 2.5rem;
+            font-size: 1.2rem;
             margin: 20px 0;
         }
-        .card-price span {
-            font-size: 1rem;
-            color: #6c757d;
-        }
+
         .card-feature {
-            margin: 15px 0;
+            margin: 10px 0;
+            font-size: 1rem;
         }
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        footer{
+
+        footer {
             background-color: #111;
+            color: white;
+            padding-top: 30px;
         }
-        .footerContainer{
-            width: 100%;
-            padding: 70px 30px 20px ;
+
+        .footerContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
         }
-        .socialIcons{
+
+        .socialIcons {
             display: flex;
             justify-content: center;
+            margin-bottom: 20px;
         }
-        .socialIcons a{
+
+        .socialIcons a {
             text-decoration: none;
-            padding:  10px;
+            padding: 10px;
             background-color: white;
             margin: 10px;
             border-radius: 50%;
-        }
-        .socialIcons a i{
-            font-size: 2em;
-            color: black;
-            opacity: 0,9;
-        }
-        /* Hover affect on social media icon */
-        .socialIcons a:hover{
-            background-color: #111;
-            transition: 0.5s;
-        }
-        .socialIcons a:hover i{
-            color: white;
-            transition: 0.5s;
-        }
-        .footerNav{
-            margin: 30px 0;
-        }
-        .footerNav ul{
-            display: flex;
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
-            list-style-type: none;
+            width: 50px;
+            height: 50px;
         }
-        .footerNav ul li a{
-            color:white;
-            margin: 20px;
-            text-decoration: none;
-            font-size: 1.3em;
-            opacity: 0.7;
-            transition: 0.5s;
 
+        .socialIcons a i {
+            font-size: 1.5rem;
+            color: black;
         }
-        .footerNav ul li a:hover{
-            opacity: 1;
+
+        .socialIcons a:hover {
+            background-color: #555;
         }
-        .footerBottom{
-            background-color: #000;
-            padding: 20px;
-            text-align: center;
-        }
-        .footerBottom p{
+
+        .socialIcons a:hover i {
             color: white;
         }
-        .designer{
-            opacity: 0.7;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 400;
-            margin: 0px 5px;
+
+        .footerNav ul {
+            list-style-type: none;
+            padding: 0;
         }
-        @media (max-width: 700px){
-            .footerNav ul{
+
+        .footerNav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footerNav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .footerNav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footerBottom {
+            background-color: #000;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 700px) {
+            .footerNav ul {
                 flex-direction: column;
-            } 
-            .footerNav ul li{
-                width:100%;
-                text-align: center;
-                margin: 10px;
+                align-items: center;
             }
-            .socialIcons a{
-                padding: 8px;
-                margin: 4px;
+
+            .footerNav ul li {
+                margin: 10px 0;
+            }
+
+            .socialIcons a {
+                width: 40px;
+                height: 40px;
             }
         }
     </style>
