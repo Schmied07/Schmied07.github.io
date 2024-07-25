@@ -9,139 +9,271 @@
         body, html {
             height: 100%;
             margin: 0;
+            font-family: Arial, sans-serif;
         }
-        .carousel-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 10%;
-        }
+
         .navbar-transparent {
-                background-color: rgba(255, 255, 255, 0.5) !important; /* Transparence ajustable */
-            }
+            background-color: rgba(255, 255, 255, 0.5) !important;
+        }
+
         .carousel-container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 30%;
         }
+
         .carousel-item img {
-            height: 400px; /* Adjust this value as needed */
+            height: 400px;
             object-fit: cover;
         }
 
         .pricing-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin: 50px 0;
         }
+
         .card {
             border: none;
             border-radius: 1rem;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
+
         .card-title {
-            margin-bottom: 1rem;
             font-weight: 700;
             font-size: 1.5rem;
         }
+
         .card-price {
-            font-size: 2.5rem;
+            font-size: 1.2rem;
             margin: 20px 0;
         }
-        .card-price span {
-            font-size: 1rem;
-            color: #6c757d;
-        }
+
         .card-feature {
-            margin: 15px 0;
+            margin: 10px 0;
+            font-size: 1rem;
         }
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        footer{
+
+        footer {
             background-color: #111;
+            color: white;
+            padding-top: 30px;
         }
-        .footerContainer{
-            width: 100%;
-            padding: 70px 30px 20px ;
+
+        .footerContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
         }
-        .socialIcons{
+
+        .socialIcons {
             display: flex;
             justify-content: center;
+            margin-bottom: 20px;
         }
-        .socialIcons a{
+
+        .socialIcons a {
             text-decoration: none;
-            padding:  10px;
+            padding: 10px;
             background-color: white;
             margin: 10px;
             border-radius: 50%;
-        }
-        .socialIcons a i{
-            font-size: 2em;
-            color: black;
-            opacity: 0,9;
-        }
-        /* Hover affect on social media icon */
-        .socialIcons a:hover{
-            background-color: #111;
-            transition: 0.5s;
-        }
-        .socialIcons a:hover i{
-            color: white;
-            transition: 0.5s;
-        }
-        .footerNav{
-            margin: 30px 0;
-        }
-        .footerNav ul{
-            display: flex;
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
-            list-style-type: none;
+            width: 50px;
+            height: 50px;
         }
-        .footerNav ul li a{
-            color:white;
-            margin: 20px;
-            text-decoration: none;
-            font-size: 1.3em;
-            opacity: 0.7;
-            transition: 0.5s;
 
+        .socialIcons a i {
+            font-size: 1.5rem;
+            color: black;
         }
-        .footerNav ul li a:hover{
-            opacity: 1;
+
+        .socialIcons a:hover {
+            background-color: #555;
         }
-        .footerBottom{
-            background-color: #000;
-            padding: 20px;
-            text-align: center;
-        }
-        .footerBottom p{
+
+        .socialIcons a:hover i {
             color: white;
         }
-        .designer{
-            opacity: 0.7;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 400;
-            margin: 0px 5px;
+
+        .footerNav ul {
+            list-style-type: none;
+            padding: 0;
         }
-        @media (max-width: 700px){
-            .footerNav ul{
+
+        .footerNav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footerNav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .footerNav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footerBottom {
+            background-color: #000;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 700px) {
+            .footerNav ul {
                 flex-direction: column;
-            } 
-            .footerNav ul li{
-                width:100%;
-                text-align: center;
-                margin: 10px;
+                align-items: center;
             }
-            .socialIcons a{
-                padding: 8px;
-                margin: 4px;
+
+            .footerNav ul li {
+                margin: 10px 0;
+            }
+
+            .socialIcons a {
+                width: 40px;
+                height: 40px;
             }
         }
     </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://i.ibb.co/mG0GPDX/tetrisnews-1.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                TetrisNews
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="legal/termsofService.html">Terms of Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="legal/legalprivacy.html">Privacy Policy</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light ms-3" onclick="redirectToTikTok()" type="button">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrousel -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide mt-5">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-white">
+                    <h5>Choisissez votre passion</h5>
+                    <p>Choisissez le type de contenu qui vous intéresse</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://images.unsplash.com/photo-1594321120022-7649850959bb?q=80&w=1729&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-white">
+                    <h5>Créez de l'engagement</h5>
+                    <p>Partagez ce contenu tous les jours sur votre feed TikTok pour créer de l'engagement.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1710504992495-18ce5e26d9c9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block text-white">
+                    <h5>Collaboration</h5>
+                    <p>Faites des partenariats avec des entreprises pour promouvoir leurs produits sur votre page.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container my-5">
+        <div class="pricing-header">
+            <h1>Nos Plans de Tarification</h1>
+            <p>Choisissez le plan qui vous convient le mieux.</p>
+        </div>
+        <div class="row">
+            <!-- Plan Basique -->
+            <div class="col-lg-6 mb-3">
+                <div class="card text-center border-dark">
+                    <div class="card-header bg-transparent border-0">
+                        <h5 class="card-title">Monétisez automatiquement votre compte à partir de 1000 abonnés!</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-price">Essayer le programme "Tous Rentable" de TetrisNews</p>
+                        <ul class="list-unstyled">
+                            <li class="card-feature">1- Se connecter</li>
+                            <li class="card-feature">2- Choisir <span>"Tous Rentable"</span> sur la page d'accueil</li>
+                            <li class="card-feature">3- Consulter les annonces disponibles</li>
+                            <li class="card-feature">4- Postuler à l'annonce qui vous correspond</li>
+                            <li class="card-feature">5- Gagner de l'argent à chaque publication faite à partir de votre compte</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Plan Standard -->
+            <div class="col-lg-6 mb-3">
+                <div class="card text-center border-primary">
+                    <div class="card-header bg-transparent border-0">
+                        <h5 class="card-title">Trouvez des bons plans en fonction de vos goûts</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-price">Essayer le programme "Bonne Nouvelle" de TetrisNews</p>
+                        <ul class="list-unstyled">
+                            <li class="card-feature">1- Se connecter</li>
+                            <li class="card-feature">2- Choisir "Bonne Nouvelle" sur la page d'accueil</li>
+                            <li class="card-feature">3- Choisir le type de contenu qui vous sera profitable</li>
+                            <li class="card-feature">4- Recevez vos bonnes nouvelles</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.linkedin.com/groups/14445246/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.tiktok.com/@ecotalks"><i class="bi bi-tiktok"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Vous êtes une entreprise</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="teams.html">Our Team</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2023; Designed by <span class="designer">Thibaut Talom</span></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         function generateState(length) {
             const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -166,137 +298,5 @@
             window.location.href = url;
         }
     </script>
-    <!-- Barre de navigation -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-transparent fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="https://i.ibb.co/mG0GPDX/tetrisnews-1.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                TetrisNews
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link link-dark" href="legal/termsofService.html">termsofService</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link-dark" href="legal/legalprivacy.html">legalprivacy</a>
-                    </li>
-                    
-                </ul>
-                <button class="btn btn-outline-dark me-2" onclick="redirectToTikTok()" type="button">Login</button>
-            </div>
-        </div>
-    </nav>
-</head>
-<body>
-    
-
-    <!-- Carrousel -->
-    <div id="carouselExampleDark" class="carousel carousel-dark slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-                <img src="https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block text-white">
-                    <h5>Choisissez votre passion</h5>
-                    <p>Choisissez le type de contenu qui vous interesse</p>
-                </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="https://images.unsplash.com/photo-1594321120022-7649850959bb?q=80&w=1729&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block text-white">
-                    <h5>Créez de l'engagement</h5>
-                    <p> Partager ce contenu tous les jours sur votre feed tiktok de façon automatique pour créer de l'engagement.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1710504992495-18ce5e26d9c9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Collaboration</h5>
-                    <p>Faire des partenariats avec des entreprises pour promouvoir leurs produits sur votre page.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-
-    <div class="container">
-        <div class="pricing-header">
-            <h1>Nos Plans de Tarification</h1>
-            <p>Choisissez le plan qui vous convient le mieux.</p>
-        </div>
-        <div class="row">
-            <!-- Plan Basique -->
-            <div class="col-lg-5">
-                <div class="card text-center border-dark">
-                    <div class="card-header">                        
-                        <h5 class="card-title">Monétisez automatiquement votre compte à partir de 1000 abonnés! </h5>
-                        <p class="card-price">Essayer le programme "Tous Rentable"  de TetrisNews</p>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li class="card-feature">1- Se connecter</li>
-                            <li class="card-feature">2- Choisir <span>"Tous Rentable"</span> sur la page d'acceuil</li><li class="card-feature">1- Consulter les annonces disponibles</li>
-                            <li class="card-feature">3- Postuler à l'annonce qui vous correspond</li>
-                            <li class="card-feature">4- Gagner de l'argent à chaque publication faite à partir de votre compte</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Plan Standard -->
-            <div class="col-lg-5">
-                <div class="card text-center border-primary">
-                    <div class="card-header">
-                        <h5 class="card-title">Trouver des bons plans en fonctions de vos goûts</h5>
-                        <p class="card-price">Essayer le programme "Bonne nouvelle"  de TetrisNews</p>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li class="card-feature">1- Se connecter</li>
-                            <li class="card-feature">2- Choisir "Bonne Nouvelle" sur la page d'acceuil</li>
-                            <li class="card-feature">3- choisir le type de contenu qui vous sera profitable</li>
-                            <li class="card-feature">4-Recevez vos bonnes nouvelles</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-<footer>
-    <div class="footerContainer">
-        <div class="socialIcons">
-            <a href="https://www.linkedin.com/groups/14445246/"><i class="bi bi-linkedin"></i></a>
-            <a href="https://www.tiktok.com/@ecotalks"><i class="bi bi-tiktok"></i></a>
-        </div>
-        <div class="footerNav">
-            <ul><li><a href="">Home</a></li>
-                <li><a href="">News</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li><a href="teams.html">our Team</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footerBottom">
-        <p>Copyright &copy;2023; Designed by <span class="designer">Thibaut Talom</span></p>
-    </div>
-</footer>
 </html>
